@@ -36,7 +36,10 @@ function(req, res) {
     res.json({ "time": req.time });
 });
 
-
+app.get('/:word/echo', function(req, res) {
+    const word = req.params.word;
+    res.json({ "echo": word });
+});
 
 
 
