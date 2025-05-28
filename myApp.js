@@ -7,7 +7,7 @@ console.log("Hello World");
 //});
 
 app.get('/', function(req, res) {
-    AbsolutePath = __dirname + 'views/index.html';
+    AbsolutePath = __dirname + '/views/index.html';
   res.send(AbsolutePath);
 });
 
