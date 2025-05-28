@@ -7,13 +7,16 @@ console.log("Hello World");
 //});
 
 app.use('/public', express.static(__dirname + '/public'));
- app.get('/', function(req, res) {
-    const absolutePath = __dirname + '/views/index.html';
-  res.sendFile(absolutePath);
+
+app.get('/', function(req, res) {
+    const AbsolutePath = __dirname + '/views/index.html';
+  res.sendFile(AbsolutePath);
 });
 
-
-
+app.get('/json', function(req, res) {
+  let message = "Hello json";
+  res.json({ "message": message });
+});
 
 
 
